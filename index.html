@@ -599,6 +599,50 @@ body{font-family:"TajawalE","Tajawal","Segoe UI","Noto Sans Arabic","Geeza Pro",
 .gend{text-align:center;padding:10px 0}
 .gend .big{font-size:56px}
 .gend h3{margin:6px 0;font-size:22px}
+/* ===== v7: ريلز بأسلوب تيك توك ===== */
+#reelWrap{position:fixed;top:0;left:0;right:0;margin:0 auto;max-width:560px;bottom:var(--navH,64px);overflow-y:auto;scroll-snap-type:y mandatory;background:#000;z-index:5;overscroll-behavior:contain;scrollbar-width:none}
+#reelWrap::-webkit-scrollbar{display:none}
+.reel{position:relative;height:100%;scroll-snap-align:start;scroll-snap-stop:always;overflow:hidden;color:#fff;display:flex;align-items:center}
+.rbg{position:absolute;inset:-20%;background:radial-gradient(circle at 30% 20%,var(--c1),transparent 55%),radial-gradient(circle at 75% 80%,var(--c2),transparent 55%),linear-gradient(160deg,#0b1a20,#132b33);animation:rbg 14s ease-in-out infinite alternate}
+@keyframes rbg{to{transform:rotate(8deg) scale(1.08)}}
+.reel::after{content:"";position:absolute;inset:0;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23fff' stroke-width='1.2'%3E%3Cpath d='M28 6l6 8h10v10l8 6-8 6v10H34l-6 8-6-8H12V36l-8-6 8-6V14h10z'/%3E%3Ccircle cx='28' cy='30' r='7'/%3E%3C/g%3E%3C/svg%3E");background-size:56px}
+#v-reels.active{animation:none!important}
+.rc{position:relative;z-index:2;padding:64px 18px 64px 76px;width:100%;max-width:640px;margin:0 auto}
+.rc[dir=ltr]{padding:64px 18px 64px 76px}
+.remo{font-size:62px;line-height:1;animation:float 3s ease-in-out infinite;display:inline-block}
+@keyframes float{50%{transform:translateY(-8px) rotate(4deg)}}
+.rtag{display:inline-block;margin-top:12px;font-size:12.5px;font-weight:800;color:#1b2b31;background:#f1d592;padding:3px 11px;border-radius:999px}
+.rc h2{font-size:25px;line-height:1.4;margin:10px 0 10px;font-weight:800;text-shadow:0 4px 20px rgba(0,0,0,.35)}
+.rtxt{font-size:17px;line-height:1.85;opacity:.96;margin:0}
+.rreveal{margin-top:12px;border:1.5px dashed rgba(255,255,255,.5);background:rgba(255,255,255,.1);color:#fff;border-radius:16px;padding:12px 16px;font-size:15px;font-weight:800;width:100%;text-align:center}
+.rhid{display:none;animation:stIn .4s ease}
+.rhid.on{display:block}
+.rbox{margin-top:12px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:12px 14px;font-size:15.5px;line-height:1.75;backdrop-filter:blur(6px)}
+.rbox.ok{background:rgba(47,133,90,.35);border-color:#5cc58a}
+.rbox.no{background:rgba(192,80,63,.35);border-color:#ec806f}
+.ropt{display:block;width:100%;text-align:start;margin-top:8px;border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;border-radius:14px;padding:11px 13px;font-size:15px;font-weight:700}
+.ropt.correct{background:#2f855a;border-color:#5cc58a}.ropt.wrong{background:#c0503f;border-color:#ec806f}.ropt:disabled{opacity:.9}
+.ract{position:absolute;left:12px;bottom:96px;z-index:4;display:flex;flex-direction:column;gap:14px;align-items:center}
+.ract button{width:50px;height:50px;border-radius:50%;border:none;background:rgba(0,0,0,.28);backdrop-filter:blur(6px);color:#fff;font-size:22px;display:grid;place-items:center;transition:transform .15s}
+.ract button:active{transform:scale(.85)}
+.ract small{display:block;font-size:10.5px;text-align:center;margin-top:-10px;opacity:.85}
+.ract .like.on{background:rgba(232,60,90,.9);animation:rpop .35s ease}@keyframes rpop{50%{transform:scale(1.25)}}
+.ract .save.on{background:rgba(217,173,90,.95)}
+.rcap{position:absolute;bottom:14px;right:18px;left:76px;z-index:3;font-size:12px;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rcap b{font-weight:800}
+.rtop{position:fixed;top:0;left:0;right:0;margin:0 auto;max-width:560px;z-index:7;display:flex;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top)) 14px 10px;background:linear-gradient(180deg,rgba(0,0,0,.55),transparent);color:#fff;pointer-events:none}
+.rtop>*{pointer-events:auto}
+.rtop b{font-size:15px;flex:1;white-space:nowrap}
+.rtop .rf{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;border-radius:999px;padding:5px 12px;font-size:12.5px;font-weight:800}
+.rtop .rf.on{background:#fff;color:#1b2b31}
+.rtop .cnt{font-size:12px;opacity:.85}
+.heart{position:fixed;z-index:30;font-size:90px;pointer-events:none;animation:heart .8s ease forwards;transform:translate(-50%,-50%)}
+@keyframes heart{0%{opacity:0;transform:translate(-50%,-50%) scale(.3)}25%{opacity:1;transform:translate(-50%,-50%) scale(1.2)}100%{opacity:0;transform:translate(-50%,-120%) scale(1)}}
+.swipehint{position:absolute;bottom:70px;left:0;right:0;text-align:center;z-index:3;font-size:13px;font-weight:700;animation:hint 1.6s ease-in-out infinite;opacity:.9}
+@keyframes hint{50%{transform:translateY(-10px)}}
+@media (max-height:720px){.remo{font-size:44px}.rc h2{font-size:20px;margin:6px 0}.rtxt{font-size:15px;line-height:1.7}.ropt{padding:8px 11px;font-size:14px;margin-top:6px}.rbox{font-size:14px;padding:9px 12px;line-height:1.6;margin-top:8px}.rreveal{padding:10px;font-size:14px}.ract{gap:10px;bottom:70px}.ract button{width:44px;height:44px;font-size:19px}.rc{padding-top:58px;padding-bottom:50px}}
+@media (max-height:560px){.remo{font-size:34px}.rc h2{font-size:18px}.rtag{margin-top:6px}.rc{padding-top:52px;padding-bottom:42px}.ract small{display:none}.ract{gap:8px}}
+.rempty{height:100%;display:grid;place-items:center;text-align:center;color:#fff;padding:30px}
 </style>
 </head>
 <body>
@@ -907,7 +951,7 @@ body{font-family:"TajawalE","Tajawal","Segoe UI","Noto Sans Arabic","Geeza Pro",
     <div class="card-box" style="margin-top:14px;text-align:center">
       <img class="about-logo" alt="" id="aboutLogo">
       <div class="wordmark" style="color:var(--teal);font-size:30px;text-shadow:none">التعليم <span style="color:var(--gold)">الصريح</span></div>
-      <p style="margin:2px 0 0;color:var(--muted)">الدليل المرجعي التفاعلي · الإصدار 6.0 · أكتوبر 2026</p>
+      <p style="margin:2px 0 0;color:var(--muted)">الدليل المرجعي التفاعلي · الإصدار 7.0 · أكتوبر 2026</p>
       <p style="margin:10px 0 0;font-size:14.5px">إعداد وتصميم: <b style="color:var(--teal)">ذ. عبد الصمد تواهري</b></p>
     </div>
     <h3 class="sec-t">📚 مصادر المحتوى</h3>
@@ -939,6 +983,12 @@ body{font-family:"TajawalE","Tajawal","Segoe UI","Noto Sans Arabic","Geeza Pro",
 <section class="view" id="v-game">
   <div class="appbar"><div class="wrap"><button class="back" data-go="path" aria-label="رجوع"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button><h2 id="gTitle">لعبة</h2></div></div>
   <div class="wrap"><div class="gstage" id="gBox"></div></div>
+</section>
+
+<!-- ================= REELS ================= -->
+<section class="view" id="v-reels">
+  <div class="rtop" id="rTop"><b>🎬 ريلز</b><span class="cnt" id="rCnt"></span><button class="rf on" data-f="all">الكل</button><button class="rf" data-f="saved">🔖 المحفوظات</button></div>
+  <div id="reelWrap" aria-label="ريلز"></div>
 </section>
 
 <!-- ================= SEARCH ================= -->
@@ -1004,8 +1054,8 @@ body{font-family:"TajawalE","Tajawal","Segoe UI","Noto Sans Arabic","Geeza Pro",
 <nav class="tabs" aria-label="التنقل"><div class="in">
   <button class="tab on" data-go="home"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>الرئيسية</button>
   <button class="tab" data-go="path"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 21c0-4 3-5 7-5s7-1 7-5-3-5-7-5"/><circle cx="12" cy="6" r="2"/><circle cx="5" cy="21" r="1.5"/></svg>رحلتي</button>
+  <button class="tab" data-go="reels"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8h18M8 3l3 5M14 3l3 5"/><path d="M10 12v5l4-2.5z" fill="currentColor"/></svg>ريلز</button>
   <button class="tab" data-go="maps"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M12 11.5L5 16.5M12 11.5l7 5"/></svg>الخطاطات</button>
-  <button class="tab" data-go="faq"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5v.01"/></svg>الموسوعة</button>
   <button class="tab" data-go="badges"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg>الشارات</button>
 </div></nav>
 <div class="toast" id="toast"></div>
@@ -2792,6 +2842,76 @@ BADGES.push({id:"streak",em:"🔥",t:"المواظب",d:"3 أيام متتالي
 BADGES.push({id:"journey",em:"🗺️",t:"الرحّالة",d:"أتمم محطات الرحلة كلها",ok:function(){return JOURNEY.every(jDone);}});
 BADGES.push({id:"stories",em:"📲",t:"قارئ القصص",d:"شاهد قصص المحاور السبعة",ok:function(){return store.get("stSeen",[]).length>=MAPS.length;}});
 (function(){var t=$("tipBox");if(t){var e=t.querySelector(".e");if(e)e.outerHTML='<div style="width:52px;height:52px;flex:none">'+OWL_SVG+'</div>';}})();
+/* ===================== v7: ريلز ===================== */
+function setNavH(){var n=document.querySelector("nav.tabs");if(n)document.documentElement.style.setProperty("--navH",n.offsetHeight+"px");}
+setNavH();window.addEventListener("resize",setNavH);
+var REELS=(function(){
+  var R=[],PAL=[["#1f7a80","#b8892f"],["#7a5c94","#1f7a80"],["#c46a4f","#7a5c94"],["#3f7cac","#5c8a6b"],["#5c8a6b","#b8892f"],["#b8892f","#c46a4f"]];
+  var cards=CARDS.map(function(c,i){return {k:"card",id:"c"+i,e:emoFor(c.f,i),tag:c.c,h:c.f,b:c.b,r:c.r};});
+  var myths=MYTHS.map(function(m,i){return {k:"myth",id:"m"+i,e:"🧪",tag:"خرافة أم حقيقة؟",h:m.m,b:m.t,r:m.r};});
+  var qs=QB.map(function(q,i){return {k:"quiz",id:"q"+i,e:"🎯",tag:"اختبر نفسك",h:q.q,q:q,r:"بنك الأسئلة"};});
+  var tf=TF.map(function(t,i){return {k:"tf",id:"t"+i,e:"⚡",tag:"صح أم خطأ؟",h:t[0],ans:t[1],b:t[2],r:"الشرائح"};});
+  var sc=[];SCRIPTS.forEach(function(s){s.ar.slice(0,2).forEach(function(x,j){sc.push({k:"say",id:"s"+s.id+j,e:"🗣️",tag:"قلها في القسم · "+s.t,h:x,b:s.s,r:"بنك العبارات"});});});
+  var src=[shuffle(cards),shuffle(myths),shuffle(qs).slice(0,18),shuffle(tf),shuffle(sc)],out=[],k=0;
+  while(src.some(function(a){return a.length;})){var a=src[k%src.length];if(a.length)out.push(a.shift());k++;}
+  out.forEach(function(r,i){var p=PAL[i%PAL.length];r.c1=p[0];r.c2=p[1];});
+  return out;
+})();
+var reelFilter="all",reelObs=null;
+window.__ts={REELS:REELS,store:store};
+function reelHTML(r,i){
+  var liked=store.get("rLike",[]).indexOf(r.id)>-1,saved=store.get("rSave",[]).indexOf(r.id)>-1,fr=/^[A-Za-z]/.test(r.h),body="";
+  if(r.k==="card")body='<button class="rreveal" data-act="rev">👆 المس لاكتشاف الفكرة في سطرين</button><div class="rhid"><div class="rbox">'+esc(r.b)+'</div></div>';
+  else if(r.k==="myth")body='<p class="rtxt">هل هذا صحيح؟ 🤔</p><button class="rreveal" data-act="rev">👆 اكشف البديل الصريح</button><div class="rhid"><div class="rbox no">❌ خرافة شائعة</div><div class="rbox ok">✅ '+esc(r.b)+'</div></div>';
+  else if(r.k==="quiz"){var o=shuffle(r.q.o.map(function(t,j){return {t:t,ok:j===0};}));body=o.map(function(x){return '<button class="ropt" data-ok="'+(x.ok?1:0)+'" dir="auto">'+esc(x.t)+'</button>';}).join("")+'<div class="rhid"><div class="rbox">'+esc(r.q.e)+'</div></div>';}
+  else if(r.k==="tf")body='<div class="row" style="margin-top:12px"><button class="ropt" style="flex:1;text-align:center" data-tf="1">✓ صحيح</button><button class="ropt" style="flex:1;text-align:center" data-tf="0">✗ خطأ</button></div><div class="rhid"><div class="rbox"></div></div>';
+  else if(r.k==="say")body='<p class="rtxt" style="opacity:.8">'+esc(r.b)+'</p><button class="rreveal" data-act="copy">⧉ انسخ العبارة لجذاذتك</button>';
+  return '<div class="reel" data-i="'+i+'" data-k="'+r.k+'" style="--c1:'+r.c1+';--c2:'+r.c2+'"><div class="rbg"></div>'+
+    '<div class="rc"'+(fr?' dir="ltr"':'')+'><span class="remo">'+r.e+'</span><br><span class="rtag">#'+esc(r.tag)+'</span><h2>'+(r.k==="say"?"«"+esc(r.h)+"»":esc(r.h))+'</h2>'+body+'</div>'+
+    '<div class="ract"><button class="like'+(liked?" on":"")+'" data-act="like" aria-label="إعجاب">'+(liked?"❤️":"🤍")+'</button><small>أعجبني</small><button class="save'+(saved?" on":"")+'" data-act="save" aria-label="حفظ">🔖</button><small>حفظ</small><button data-act="spk" aria-label="استمع">🔊</button><small>استمع</small><button data-act="share" aria-label="مشاركة">↗</button><small>شارك</small></div>'+
+    '<div class="rcap"><b>@ذ. عبد الصمد تواهري</b><span>· 📘 '+esc(r.r)+'</span></div>'+(i===0&&!store.get("rHint",false)?'<div class="swipehint">⬆️ اسحب للأعلى للريل التالي</div>':'')+'</div>';
+}
+function renderReels(){
+  var list=reelFilter==="saved"?REELS.filter(function(r){return store.get("rSave",[]).indexOf(r.id)>-1;}):REELS;
+  var w=$("reelWrap");
+  w.innerHTML=list.length?list.map(function(r){return reelHTML(r,REELS.indexOf(r));}).join(""):'<div class="rempty"><div><div style="font-size:54px">🔖</div><h3>لا محفوظات بعد</h3><p style="opacity:.8">المس 🔖 على أي ريل لحفظه هنا</p></div></div>';
+  w.scrollTop=0;updReelCnt();
+  if(reelObs)reelObs.disconnect();
+  if("IntersectionObserver" in window){reelObs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting&&e.boundingClientRect.height>200){var id=REELS[+e.target.getAttribute("data-i")].id,s=store.get("rSeen",[]);if(s.indexOf(id)<0){s.push(id);store.set("rSeen",s);addXP(1,true);updReelCnt();}
+      if(+e.target.getAttribute("data-i")!==REELS.indexOf(list[0]))store.set("rHint",true);}});},{root:w,threshold:.6});
+    w.querySelectorAll(".reel").forEach(function(el){reelObs.observe(el);});}
+}
+function updReelCnt(){$("rCnt").textContent="👁 "+store.get("rSeen",[]).length+" / "+REELS.length;}
+function toggleList(key,id){var a=store.get(key,[]),i=a.indexOf(id);if(i>-1)a.splice(i,1);else a.push(id);store.set(key,a);return i<0;}
+function heartAt(x,y){var h=document.createElement("div");h.className="heart";h.textContent="❤️";h.style.left=x+"px";h.style.top=y+"px";document.body.appendChild(h);setTimeout(function(){h.remove();},850);}
+(function(){
+  var lastTap=0;
+  $("reelWrap").addEventListener("click",function(e){
+    var reel=e.target.closest(".reel");if(!reel)return;var r=REELS[+reel.getAttribute("data-i")];
+    var b=e.target.closest("button");
+    if(!b){var now=Date.now();if(now-lastTap<320){var lk=reel.querySelector(".like");if(!lk.classList.contains("on")){toggleList("rLike",r.id);lk.classList.add("on");lk.textContent="❤️";}heartAt(e.clientX,e.clientY);beep("ok");}lastTap=now;return;}
+    var act=b.getAttribute("data-act");
+    if(act==="rev"){b.style.display="none";reel.querySelector(".rhid").classList.add("on");beep("tap");addXP(2,true);}
+    else if(act==="like"){var on=toggleList("rLike",r.id);b.classList.toggle("on",on);b.textContent=on?"❤️":"🤍";if(on){var rc=b.getBoundingClientRect();heartAt(rc.left+25,rc.top);beep("ok");}}
+    else if(act==="save"){var sv=toggleList("rSave",r.id);b.classList.toggle("on",sv);toast(sv?"🔖 حُفظ في المحفوظات":"أُزيل من المحفوظات");beep("tap");}
+    else if(act==="spk"){var t=r.h+". "+(r.k==="quiz"?r.q.o[0]+". "+r.q.e:(r.b||""));speakToggle(t,/^[A-Za-z]/.test(r.h)?"fr-FR":"ar-SA",b);}
+    else if(act==="share"){var txt="📘 "+r.h+(r.b&&r.k!=="tf"?"\n"+r.b:"")+"\n\nمن تطبيق التعليم الصريح:\nhttps://abdtouahri5023-max.github.io/Taalim/";
+      if(navigator.share)navigator.share({text:txt}).catch(function(){});else wa(txt);}
+    else if(act==="copy"){copyText(r.h,b);}
+    else if(b.classList.contains("ropt")&&!b.disabled){
+      var ok;if(b.hasAttribute("data-tf")){ok=(+b.getAttribute("data-tf"))===r.ans;reel.querySelector(".rhid .rbox").className="rbox "+(ok?"ok":"no");reel.querySelector(".rhid .rbox").innerHTML=(ok?"✔ أحسنت! ":"✘ الجواب: "+(r.ans?"صحيح":"خطأ")+" — ")+esc(r.b);
+        reel.querySelectorAll(".ropt").forEach(function(x){x.disabled=true;if(+x.getAttribute("data-tf")===r.ans)x.classList.add("correct");else x.classList.add("wrong");});}
+      else{ok=b.getAttribute("data-ok")==="1";reel.querySelectorAll(".ropt").forEach(function(x){x.disabled=true;if(x.getAttribute("data-ok")==="1")x.classList.add("correct");else if(x===b)x.classList.add("wrong");});}
+      reel.querySelector(".rhid").classList.add("on");beep(ok?"ok":"bad");if(ok)addXP(5);
+    }
+  });
+  $("rTop").addEventListener("click",function(e){var b=e.target.closest(".rf");if(!b)return;reelFilter=b.getAttribute("data-f");$("rTop").querySelectorAll(".rf").forEach(function(x){x.classList.toggle("on",x===b);});stopTTS();renderReels();});
+})();
+document.addEventListener("keydown",function(e){if(curView!=="reels"||/INPUT|TEXTAREA/.test((e.target||{}).tagName||""))return;var w=$("reelWrap"),d=e.key==="ArrowDown"||e.key==="PageDown"?1:e.key==="ArrowUp"||e.key==="PageUp"?-1:0;if(d){e.preventDefault();w.scrollBy({top:d*w.clientHeight,behavior:"smooth"});}});
+var _goV6=go;go=function(v,n){_goV6(v,n);if(v==="reels"){setNavH();renderReels();}};
+BADGES.push({id:"reels",em:"🎬",t:"نجم الريلز",d:"شاهد 40 ريلاً",ok:function(){return store.get("rSeen",[]).length>=40;}});
+(function(){var orig=renderStories;renderStories=function(){orig();$("storyRow").insertAdjacentHTML("afterbegin",'<button class="sc" data-go="reels"><span class="ring" style="background:conic-gradient(from 0deg,#ff2d55,#f1d592,#25f4ee,#ff2d55)"><span class="in">🎬</span></span><span>ريلز</span></button>');};})();
+
 renderHomeV6();
 
 (function(){var g=$("sfxSeg");var f=function(){var v=store.get("sfx",true);g.querySelectorAll("button").forEach(function(b){b.classList.toggle("on",(b.getAttribute("data-s")==="1")===v);});};g.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var v=b.getAttribute("data-s")==="1";store.set("sfx",v);store.set("vib",v);f();if(v)beep("ok");});f();})();
@@ -2800,7 +2920,6 @@ refreshHome();
 (function(){var h=(location.hash||"").slice(1);if(h&&h!=="home"&&$("v-"+h)){go(h,true);}try{history.replaceState({v:curView},"","#"+curView);}catch(e){}})();
 })();
 </script>
-
 <script>if("serviceWorker" in navigator && location.protocol==="https:"){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});});}</script>
 </body>
 </html>
